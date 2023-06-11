@@ -1,1 +1,2 @@
-DOMAIN-KEYWORD,msftconnecttest.com
+payload:
+  - DOMAIN-KEYWORD,msftconnecttest.com
