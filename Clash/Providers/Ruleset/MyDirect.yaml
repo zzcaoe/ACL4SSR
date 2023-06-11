@@ -1,2 +1,6 @@
 payload:
   - DOMAIN-KEYWORD,msftconnecttest.com
+  - DOMAIN-KEYWORD,nature.com
+  - DOMAIN-KEYWORD,science.org
+  - DOMAIN-KEYWORD,pubs.acs.org
+  - DOMAIN-KEYWORD,onlinelibrary.wiley.com
