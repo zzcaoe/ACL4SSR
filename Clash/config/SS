@@ -21,7 +21,7 @@ dns-direct-fallback-proxy = true
 🔯 故障转移 = fallback,url=http://www.gstatic.com/generate_204,interval=600,tolerance=100,timeout=5,select=0,policy-regex-filter=0.5
 🔮 负载均衡 = load-balance,url=http://www.gstatic.com/generate_204,interval=600,tolerance=100,timeout=5,select=0,policy-regex-filter=0.5
 📲 电报消息 = select,🚀 节点选择,♻️ 自动选择,🇸🇬 狮城节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT,timeout=5,select=1,url=http://www.gstatic.com/generate_204
-💬 OpenAi = select,🚀 节点选择,♻️ 自动选择,🇸🇬 狮城节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+💬 OpenAi = Select,url=http://www.gstatic.com/generate_204,interval=86400,timeout=5,select=0,policy-regex-filter=*
 📹 油管视频 = select,🚀 节点选择,♻️ 自动选择,🇸🇬 狮城节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT,timeout=5,select=1,url=http://www.gstatic.com/generate_204
 🎥 奈飞视频 = select,🎥 奈飞节点,🚀 节点选择,♻️ 自动选择,🇸🇬 狮城节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT,timeout=5,select=1,url=http://www.gstatic.com/generate_204
 📺 巴哈姆特 = select,🇨🇳 台湾节点,🚀 节点选择,🚀 手动切换,DIRECT,timeout=5,select=1,url=http://www.gstatic.com/generate_204
@@ -33,7 +33,7 @@ dns-direct-fallback-proxy = true
 Ⓜ️ 微软服务 = select,DIRECT,🚀 节点选择,🇺🇲 美国节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇰🇷 韩国节点,🚀 手动切换,timeout=5,select=1,url=http://www.gstatic.com/generate_204
 🍎 苹果服务 = select,DIRECT,🚀 节点选择,🇺🇲 美国节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇰🇷 韩国节点,🚀 手动切换,timeout=5,select=1,url=http://www.gstatic.com/generate_204
 🎮 游戏平台 = select,DIRECT,🚀 节点选择,🇺🇲 美国节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇰🇷 韩国节点,🚀 手动切换,timeout=5,select=1,url=http://www.gstatic.com/generate_204
-🎶 网易音乐 = select,DIRECT,🚀 节点选择,♻️ 自动选择,(网易|音乐|解锁|Music|NetEase),timeout=5,select=1,url=http://www.gstatic.com/generate_204
+🎶 网易音乐 = select,DIRECT,🚀 节点选择,♻️ 自动选择,timeout=5,select=1,url=http://www.gstatic.com/generate_204
 🎯 全球直连 = select,DIRECT,🚀 节点选择,♻️ 自动选择,timeout=5,select=1,url=http://www.gstatic.com/generate_204
 🛑 广告拦截 = select,REJECT,DIRECT
 🍃 应用净化 = select,REJECT,DIRECT
