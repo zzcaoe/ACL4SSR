@@ -6,4 +6,5 @@ payload:
   - DOMAIN-KEYWORD,onlinelibrary.wiley.com
   - DOMAIN-KEYWORD,mooc.com
   - DOMAIN-KEYWORD,webofscience.com
+  - DOMAIN-KEYWORD,njupt.edu.co
   - PROCESS-NAME,EXWAgent.exe
