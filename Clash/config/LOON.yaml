@@ -70,35 +70,35 @@ dl.l.google.com = server:119.29.29.29
 
 
 [Proxy Group]
-🚀 节点选择 = select,♻️ 自动选择,🔯 故障转移,🔮 负载均衡,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT
-🚀 手动切换 = Select,url=http://www.gstatic.com/generate_204,interval=86400,timeout=5,select=0,policy-regex-filter=*
-♻️ 自动选择 = url-test,url=http://www.gstatic.com/generate_204,interval=600,tolerance=100,timeout=5,select=0,policy-regex-filter=0.5
-🔯 故障转移 = fallback,url=http://www.gstatic.com/generate_204,interval=600,tolerance=100,timeout=5,select=0,policy-regex-filter=香港B|新加坡B|日本B
-🔮 负载均衡 = load-balance,url=http://www.gstatic.com/generate_204,interval=600,tolerance=100,timeout=5,select=0,policy-regex-filter=香港B|新加坡B|日本B
-📲 电报消息 = select,🚀 节点选择,♻️ 自动选择,🇸🇬 狮城节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT,timeout=5,select=1,url=http://www.gstatic.com/generate_204
-💬 OpenAi = Select,url=http://www.gstatic.com/generate_204,interval=86400,timeout=5,select=0,policy-regex-filter=*
-📹 油管视频 = select,🚀 节点选择,♻️ 自动选择,🇸🇬 狮城节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT,timeout=5,select=1,url=http://www.gstatic.com/generate_204
-🎥 奈飞视频 = select,🚀 节点选择,♻️ 自动选择,🇸🇬 狮城节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT,timeout=5,select=1,url=http://www.gstatic.com/generate_204
-📺 巴哈姆特 = select,🇨🇳 台湾节点,🚀 节点选择,🚀 手动切换,DIRECT,timeout=5,select=1,url=http://www.gstatic.com/generate_204
-📺 哔哩哔哩 = select,🎯 全球直连,🇨🇳 台湾节点,🇭🇰 香港节点,timeout=5,select=1,url=http://www.gstatic.com/generate_204
-🌍 国外媒体 = select,🚀 节点选择,♻️ 自动选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT,timeout=5,select=1,url=http://www.gstatic.com/generate_204
-🌏 国内媒体 = select,DIRECT,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🚀 手动切换,timeout=5,select=1,url=http://www.gstatic.com/generate_204
-📢 谷歌FCM = select,DIRECT,🚀 节点选择,🇺🇲 美国节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇰🇷 韩国节点,🚀 手动切换,timeout=5,select=1,url=http://www.gstatic.com/generate_204
-Ⓜ️ 微软云盘 = select,DIRECT,🚀 节点选择,🇺🇲 美国节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇰🇷 韩国节点,🚀 手动切换,timeout=5,select=1,url=http://www.gstatic.com/generate_204
-Ⓜ️ 微软服务 = select,DIRECT,🚀 节点选择,🇺🇲 美国节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇰🇷 韩国节点,🚀 手动切换,timeout=5,select=1,url=http://www.gstatic.com/generate_204
-🍎 苹果服务 = select,DIRECT,🚀 节点选择,🇺🇲 美国节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇰🇷 韩国节点,🚀 手动切换,timeout=5,select=1,url=http://www.gstatic.com/generate_204
-🎮 游戏平台 = select,DIRECT,🚀 节点选择,🇺🇲 美国节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇰🇷 韩国节点,🚀 手动切换,timeout=5,select=1,url=http://www.gstatic.com/generate_204
-🎶 网易音乐 = select,DIRECT,🚀 节点选择,♻️ 自动选择,timeout=5,select=1,url=http://www.gstatic.com/generate_204
-🎯 全球直连 = select,DIRECT,🚀 节点选择,♻️ 自动选择,timeout=5,select=1,url=http://www.gstatic.com/generate_204
-🛑 广告拦截 = select,REJECT,DIRECT
-🍃 应用净化 = select,REJECT,DIRECT
+节点选择 = select,自动选择,故障转移,负载均衡,香港节点,台湾节点,狮城节点,日本节点,美国节点,韩国节点,手动切换,DIRECT
+手动切换 = Select,url=http://www.gstatic.com/generate_204,interval=86400,timeout=5,select=0,policy-regex-filter=*
+自动选择 = url-test,url=http://www.gstatic.com/generate_204,interval=600,tolerance=100,timeout=5,select=0,policy-regex-filter=0.5
+故障转移 = fallback,url=http://www.gstatic.com/generate_204,interval=600,tolerance=100,timeout=5,select=0,policy-regex-filter=香港B|新加坡B|日本B
+负载均衡 = load-balance,url=http://www.gstatic.com/generate_204,interval=600,tolerance=100,timeout=5,select=0,policy-regex-filter=香港B|新加坡B|日本B
+电报消息 = select,节点选择,自动选择,狮城节点,香港节点,台湾节点,日本节点,美国节点,韩国节点,手动切换,DIRECT,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+OpenAi = Select,url=http://www.gstatic.com/generate_204,interval=86400,timeout=5,select=0,policy-regex-filter=*
+油管视频 = select,节点选择,自动选择,狮城节点,香港节点,台湾节点,日本节点,美国节点,韩国节点,手动切换,DIRECT,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+奈飞视频 = select,节点选择,自动选择,狮城节点,香港节点,台湾节点,日本节点,美国节点,韩国节点,手动切换,DIRECT,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+巴哈姆特 = select,台湾节点,节点选择,手动切换,DIRECT,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+哔哩哔哩 = select,全球直连,台湾节点,香港节点,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+国外媒体 = select,节点选择,自动选择,香港节点,台湾节点,狮城节点,日本节点,美国节点,韩国节点,手动切换,DIRECT,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+国内媒体 = select,DIRECT,香港节点,台湾节点,狮城节点,日本节点,手动切换,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+谷歌FCM = select,DIRECT,节点选择,美国节点,香港节点,台湾节点,狮城节点,日本节点,韩国节点,手动切换,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+微软云盘 = select,DIRECT,节点选择,美国节点,香港节点,台湾节点,狮城节点,日本节点,韩国节点,手动切换,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+微软服务 = select,DIRECT,节点选择,美国节点,香港节点,台湾节点,狮城节点,日本节点,韩国节点,手动切换,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+苹果服务 = select,DIRECT,节点选择,美国节点,香港节点,台湾节点,狮城节点,日本节点,韩国节点,手动切换,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+游戏平台 = select,DIRECT,节点选择,美国节点,香港节点,台湾节点,狮城节点,日本节点,韩国节点,手动切换,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+网易音乐 = select,DIRECT,节点选择,自动选择,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+全球直连 = select,DIRECT,节点选择,自动选择,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+广告拦截 = select,REJECT,DIRECT
+应用净化 = select,REJECT,DIRECT
 香港节点 = url-test,香港,url = http://www.gstatic.com/generate_204,interval = 600,tolerance = 1000,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
 台湾节点 = url-test,台湾,url = http://www.gstatic.com/generate_204,interval = 600,tolerance = 1000,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
 狮城节点 = url-test,新加坡,url = http://www.gstatic.com/generate_204,interval = 600,tolerance = 1000,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
 韩国节点 = url-test,韩国,url = http://www.gstatic.com/generate_204,interval = 600,tolerance = 1000,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
 日本节点 = url-test,日本,url = http://www.gstatic.com/generate_204,interval = 600,tolerance = 1000,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
 美国节点 = url-test,美国,url = http://www.gstatic.com/generate_204,interval = 600,tolerance = 1000,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
-🐟 漏网之鱼 = select,🚀 节点选择,♻️ 自动选择,DIRECT,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+漏网之鱼 = select,节点选择,自动选择,DIRECT,香港节点,台湾节点,狮城节点,日本节点,美国节点,韩国节点,手动切换,timeout=5,select=1,url=http://www.gstatic.com/generate_204
 
 
 [Remote Filter]
@@ -111,43 +111,43 @@ dl.l.google.com = server:119.29.29.29
 
 [Rule]
 GEOIP,cn,DIRECT,no-resolve
-FINAL,🐟 漏网之鱼
+FINAL,漏网之鱼
 
 [Remote Rule]
-https://raw.githubusercontent.com/zzcaoe/ACL4SSR/patch-1/Clash/Providers/Ruleset/MyDirect.yaml,policy=🎯 全球直连,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list,policy=🎯 全球直连,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list,policy=🎯 全球直连,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list,policy=🛑 广告拦截,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list,policy=🍃 应用净化,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list,policy=📢 谷歌FCM,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list,policy=🎯 全球直连,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list,policy=🎯 全球直连,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive.list,policy=Ⓜ️ 微软云盘,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list,policy=Ⓜ️ 微软服务,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list,policy=🍎 苹果服务,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list,policy=📲 电报消息,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list,policy=💬 OpenAi,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/NetEaseMusic.list,policy=🎶 网易音乐,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list,policy=🎮 游戏平台,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Origin.list,policy=🎮 游戏平台,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Sony.list,policy=🎮 游戏平台,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Steam.list,policy=🎮 游戏平台,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Nintendo.list,policy=🎮 游戏平台,enabled=true
-https://raw.githubusercontent.com/zzcaoe/ACL4SSR/patch-1/Clash/Providers/Ruleset/Uplay.yaml,policy=🎮 游戏平台,enabled=true
-https://raw.githubusercontent.com/zzcaoe/ACL4SSR/patch-1/Clash/Providers/Ruleset/Rockstar,policy=🎮 游戏平台,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list,policy=📹 油管视频,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Netflix.list,policy=🎥 奈飞视频,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bahamut.list,policy=📺 巴哈姆特,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list,policy=📺 哔哩哔哩,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bilibili.list,policy=📺 哔哩哔哩,enabled=true
+https://raw.githubusercontent.com/zzcaoe/ACL4SSR/patch-1/Clash/Providers/Ruleset/MyDirect.yaml,policy=全球直连,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list,policy=全球直连,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list,policy=全球直连,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list,policy=广告拦截,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list,policy=应用净化,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list,policy=谷歌FCM,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list,policy=全球直连,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list,policy=全球直连,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive.list,policy=微软云盘,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list,policy=微软服务,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list,policy=苹果服务,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list,policy=电报消息,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list,policy=OpenAi,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/NetEaseMusic.list,policy=网易音乐,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list,policy=游戏平台,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Origin.list,policy=游戏平台,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Sony.list,policy=游戏平台,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Steam.list,policy=游戏平台,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Nintendo.list,policy=游戏平台,enabled=true
+https://raw.githubusercontent.com/zzcaoe/ACL4SSR/patch-1/Clash/Providers/Ruleset/Uplay.yaml,policy=游戏平台,enabled=true
+https://raw.githubusercontent.com/zzcaoe/ACL4SSR/patch-1/Clash/Providers/Ruleset/Rockstar,policy=游戏平台,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list,policy=油管视频,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Netflix.list,policy=奈飞视频,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bahamut.list,policy=巴哈姆特,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list,policy=哔哩哔哩,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bilibili.list,policy=哔哩哔哩,enabled=true
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list,policy=🌏 国内媒体,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list,policy=🌍 国外媒体,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list,policy=🚀 节点选择,enabled=true
-;https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list,policy=🎯 全球直连,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list,policy=🎯 全球直连,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list,policy=🎯 全球直连,enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list,policy=🎯 全球直连,enabled=true
-;[]GEOIP,LAN,policy=🎯 全球直连,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list,policy=国外媒体,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list,policy=节点选择,enabled=true
+;https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list,policy=全球直连,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list,policy=全球直连,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list,policy=全球直连,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list,policy=全球直连,enabled=true
+;[]GEOIP,LAN,policy=全球直连,enabled=true
 
 
 [Rewrite]
