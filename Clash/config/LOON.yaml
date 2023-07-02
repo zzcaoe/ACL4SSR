@@ -1,0 +1,162 @@
+# LOON CONFIG
+# AUTHOR: LIJMXY
+# DATE: 2023.01.26
+
+[General]
+# > Google，Cloudflare，腾讯，阿里云 DoH
+doh-server = https://dns.google/dns-query,https://1.1.1.1/dns-query,https://doh.pub/dns-query,https://dns.alidns.com/dns-query
+
+# > IPv6 支持（默认关闭）
+ipv6 = false
+
+# > 跳过代理
+skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com,*.cmpassport.com,*.jegotrip.com.cn,*.icitymobile.mobi,id6.me,*.pingan.com.cn,*.cmbchina.com
+
+# > 旁路隧道
+bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
+
+# > dns服务器
+dns-server = system,223.5.5.5,223.6.6.6,119.29.29.29
+
+# > wifi 访问
+allow-wifi-access = false
+
+# > wifi 访问（http 端口）
+wifi-access-http-port = 7222
+
+# > wifi 访问（socket5 端口）
+wifi-access-socks5-port = 7221
+
+# > 代理测试网址
+proxy-test-url = http://www.gstatic.com/generate_204
+
+# > 测试超时
+test-timeout = 2
+
+# > 接口模式
+interface-mode = auto
+
+# > 节点连续失败 3 后进行节点切换
+switch-node-after-failure-times = 3
+
+# > 资源解析器
+# resource-parser = https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/dist/sub-store-parser.loon.min.js
+
+[Host]
+*.taobao.com = server:223.5.5.5
+*.tmall.com = server:223.5.5.5
+*.jd.com = server:119.28.28.28
+*.qq.com = server:119.28.28.28
+*.tencent.com = server:119.28.28.28
+*.alicdn.com = server:223.5.5.5
+*.aliyun.com = server:223.5.5.5
+*.weixin.com = server:119.28.28.28
+*.163.com = server:119.29.29.29
+*.126.com = server:119.29.29.29
+*.126.net = server:119.29.29.29
+*.127.net = server:119.29.29.29
+*.netease.com = server:119.29.29.29
+*.mi.com = server:119.29.29.29
+*.xiaomi.com = server:119.29.29.29
+*.bilibili.com = server:119.29.29.29
+*testflight.apple.com = server:8.8.4.4
+mtalk.google.com = 108.177.125.188
+dl.google.com = server:119.29.29.29
+dl.l.google.com = server:119.29.29.29
+
+[Proxy]
+
+[Remote Proxy]
+
+
+[Proxy Group]
+🚀 节点选择 = select,♻️ 自动选择,🔯 故障转移,🔮 负载均衡,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT
+🚀 手动切换 = Select,url=http://www.gstatic.com/generate_204,interval=86400,timeout=5,select=0,policy-regex-filter=*
+♻️ 自动选择 = url-test,url=http://www.gstatic.com/generate_204,interval=600,tolerance=100,timeout=5,select=0,policy-regex-filter=0.5
+🔯 故障转移 = fallback,url=http://www.gstatic.com/generate_204,interval=600,tolerance=100,timeout=5,select=0,policy-regex-filter=香港B|新加坡B|日本B
+🔮 负载均衡 = load-balance,url=http://www.gstatic.com/generate_204,interval=600,tolerance=100,timeout=5,select=0,policy-regex-filter=香港B|新加坡B|日本B
+📲 电报消息 = select,🚀 节点选择,♻️ 自动选择,🇸🇬 狮城节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+💬 OpenAi = Select,url=http://www.gstatic.com/generate_204,interval=86400,timeout=5,select=0,policy-regex-filter=*
+📹 油管视频 = select,🚀 节点选择,♻️ 自动选择,🇸🇬 狮城节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+🎥 奈飞视频 = select,🚀 节点选择,♻️ 自动选择,🇸🇬 狮城节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+📺 巴哈姆特 = select,🇨🇳 台湾节点,🚀 节点选择,🚀 手动切换,DIRECT,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+📺 哔哩哔哩 = select,🎯 全球直连,🇨🇳 台湾节点,🇭🇰 香港节点,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+🌍 国外媒体 = select,🚀 节点选择,♻️ 自动选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,DIRECT,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+🌏 国内媒体 = select,DIRECT,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🚀 手动切换,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+📢 谷歌FCM = select,DIRECT,🚀 节点选择,🇺🇲 美国节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇰🇷 韩国节点,🚀 手动切换,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+Ⓜ️ 微软云盘 = select,DIRECT,🚀 节点选择,🇺🇲 美国节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇰🇷 韩国节点,🚀 手动切换,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+Ⓜ️ 微软服务 = select,DIRECT,🚀 节点选择,🇺🇲 美国节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇰🇷 韩国节点,🚀 手动切换,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+🍎 苹果服务 = select,DIRECT,🚀 节点选择,🇺🇲 美国节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇰🇷 韩国节点,🚀 手动切换,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+🎮 游戏平台 = select,DIRECT,🚀 节点选择,🇺🇲 美国节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇰🇷 韩国节点,🚀 手动切换,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+🎶 网易音乐 = select,DIRECT,🚀 节点选择,♻️ 自动选择,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+🎯 全球直连 = select,DIRECT,🚀 节点选择,♻️ 自动选择,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+🛑 广告拦截 = select,REJECT,DIRECT
+🍃 应用净化 = select,REJECT,DIRECT
+🐟 漏网之鱼 = select,🚀 节点选择,♻️ 自动选择,DIRECT,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇺🇲 美国节点,🇰🇷 韩国节点,🚀 手动切换,timeout=5,select=1,url=http://www.gstatic.com/generate_204
+
+
+[Remote Filter]
+香港 = NameRegex, FilterKey = "(?i)(港|HK|Hong)"
+台湾 = NameRegex, FilterKey = "(?i)(台|TW|Tai)"
+日本 = NameRegex, FilterKey = "(?i)(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan)"
+韩国 = NameRegex, FilterKey = "(?i)(KR|Korea|KOR|首尔|韩|韓)"
+美国 = NameRegex, FilterKey = "(?i)(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)"
+新加坡 = NameRegex, FilterKey = "(?i)(新加坡|坡|狮城|SG|Singapore)"
+
+[Rule]
+GEOIP,cn,DIRECT,no-resolve
+FINAL,🐟 漏网之鱼
+
+[Remote Rule]
+https://raw.githubusercontent.com/zzcaoe/ACL4SSR/patch-1/Clash/Providers/Ruleset/MyDirect.yaml,policy=🎯 全球直连,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list,policy=🎯 全球直连,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list,policy=🎯 全球直连,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list,policy=🛑 广告拦截,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list,policy=🍃 应用净化,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list,policy=📢 谷歌FCM,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list,policy=🎯 全球直连,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list,policy=🎯 全球直连,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive.list,policy=Ⓜ️ 微软云盘,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list,policy=Ⓜ️ 微软服务,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list,policy=🍎 苹果服务,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list,policy=📲 电报消息,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list,policy=💬 OpenAi,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/NetEaseMusic.list,policy=🎶 网易音乐,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list,policy=🎮 游戏平台,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Origin.list,policy=🎮 游戏平台,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Sony.list,policy=🎮 游戏平台,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Steam.list,policy=🎮 游戏平台,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Nintendo.list,policy=🎮 游戏平台,enabled=true
+https://raw.githubusercontent.com/zzcaoe/ACL4SSR/patch-1/Clash/Providers/Ruleset/Uplay.yaml,policy=🎮 游戏平台,enabled=true
+https://raw.githubusercontent.com/zzcaoe/ACL4SSR/patch-1/Clash/Providers/Ruleset/Rockstar,policy=🎮 游戏平台,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list,policy=📹 油管视频,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Netflix.list,policy=🎥 奈飞视频,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bahamut.list,policy=📺 巴哈姆特,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list,policy=📺 哔哩哔哩,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bilibili.list,policy=📺 哔哩哔哩,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list,policy=🌏 国内媒体,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list,policy=🌍 国外媒体,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list,policy=🚀 节点选择,enabled=true
+;https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list,policy=🎯 全球直连,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list,policy=🎯 全球直连,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list,policy=🎯 全球直连,enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list,policy=🎯 全球直连,enabled=true
+;[]GEOIP,LAN,policy=🎯 全球直连,enabled=true
+
+
+[Rewrite]
+
+[Script]
+http-response ^https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) script-path=weathervip.js, requires-body=true, timeout=10, tag=彩云天气VIP
+http-response ^https?:\/\/backend\.getdrafts\.com\/api\/v1\/verification\/verify_receipt script-path=drafts.js, requires-body=true, timeout=10, tag=DraftsVIP
+
+[Plugin]
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/Redirect/Redirect.plugin, policy=ALL-SUB, tag=重定向, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/Advertising/Advertising.plugin, policy=REJECT, tag=Advertising, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/AdvertisingScript/AdvertisingScript.plugin, policy=REJECT, tag=AdvertisingScript, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/AllInOne/AllInOne.plugin, policy=REJECT, tag=ALL IN ONE, enabled=true
+https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/Loon/Plugin/bilibili.plugin, policy=DIRECT, tag=哔哩哔哩, enabled=true
+https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/Loon/Plugin/YouTubeAd.plugin, policy=REJECT, tag=YouTubeADs, enabled=true
+
+[Mitm]
+hostname = backend.getdrafts.com,biz.caiyunapp.com
