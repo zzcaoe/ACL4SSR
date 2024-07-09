@@ -1,0 +1,7 @@
+payload:
+# 内容：Uplay
+# 数量：
+  - DOMAIN-SUFFIX,ubi.com
+  - DOMAIN-SUFFIX,ubisoft.com
+  - DOMAIN-SUFFIX,ubisoftconnect.com
+  - DOMAIN-SUFFIX,ubisoft.org
