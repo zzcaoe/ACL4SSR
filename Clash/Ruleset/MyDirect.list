@@ -36,3 +36,4 @@ DOMAIN-KEYWORD,x1.c.lencr.org
 DOMAIN-KEYWORD,c.pki.goog
 DOMAIN-KEYWORD,msftconnecttest
 IP-CIDR,10.10.244.11/17,no-resolve
+DOMAIN-KEYWORD,go.microsoft.com
