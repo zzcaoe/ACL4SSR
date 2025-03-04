@@ -10,7 +10,8 @@ dns:
   enable: true
   ipv6: false
   listen: 127.0.0.1:{{ default(request.adg.port, "5450") }}
-  enhanced-mode: redir-host
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
   default-nameserver:
     - 10.22.240.10
     - 10.22.240.8
