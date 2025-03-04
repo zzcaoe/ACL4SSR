@@ -7,12 +7,14 @@ external-controller: :9090
 
 {% if default(request.adg, "true") == "true" or exists("request.adg.port") %}
 dns:
-  enable: false
+  enable: true
   ipv6: false
   listen: 127.0.0.1:{{ default(request.adg.port, "5450") }}
   enhanced-mode: fake-ip
   fake-ip-range: "198.18.0.1/16"
   default-nameserver:
+    - 10.22.240.10
+    - 10.22.240.8
     - 119.29.29.29
     - 119.28.28.28
     - 1.0.0.1
