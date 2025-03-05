@@ -17,6 +17,7 @@ dns:
     - '+.lan'
     - '+.local'
     - '+.msftconnecttest.com'
+    - '+.njupt.edu.com'
     - '+.msftncsi.com'
     - 'localhost.ptlogin2.qq.com'
     - 'localhost.sec.qq.com'
