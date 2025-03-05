@@ -25,11 +25,6 @@ dns:
     - 10.22.240.10
     - 10.22.240.8
     - 223.5.5.5
-  nameserver-policy:
-    '+.arpa': '10.0.0.1'
-    'rule-set:cn':
-    - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
   nameserver:
     - 10.22.240.10
     - 10.22.240.8
@@ -38,22 +33,6 @@ dns:
   fallback:
     - tls://8.8.4.4
     - tls://1.1.1.1
-  proxy-server-nameserver:
-    - https://doh.pub/dns-query
-  direct-nameserver:
-    - system
-  direct-nameserver-follow-policy: false
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    geosite:
-      - gfw
-    ipcidr:
-      - 240.0.0.0/4
-    domain:
-      - '+.google.com'
-      - '+.facebook.com'
-      - '+.youtube.com'
 {% endif %}
 
 {% if local.clash.new_field_name == "true" %}
