@@ -57,6 +57,7 @@ dns:
     geosite:private,cn,geolocation-cn:
     - 10.22.240.10
     - 10.22.240.8
+    - 119.29.29.29
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
     - https://doh.360.cn/dns-query
