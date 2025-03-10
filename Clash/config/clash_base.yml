@@ -7,7 +7,7 @@ external-controller: :9090
 
 {% if default(request.adg, "true") == "true" or exists("request.adg.port") %}
 dns:
-  enable: true
+  enable: false
   listen: 127.0.0.1:{{ default(request.adg.port, "5450") }}
   ipv6: false
   use-system-hosts: false
@@ -22,33 +22,10 @@ dns:
   - localhost.ptlogin2.qq.com
   - localhost.sec.qq.com
   - localhost.work.weixin.qq.com
-  default-nameserver:
-  - 10.22.240.10
-  - 10.22.240.8
-  - 223.5.5.5
-  - 119.29.29.29
-  - 114.114.114.114
   nameserver:
   - 10.22.240.10
   - 10.22.240.8
-  - https://dns.alidns.com/dns-query
-  - https://doh.pub/dns-query
-  proxy-server-nameserver:
-  - 10.22.240.10
-  - 10.22.240.8
-  - https://dns.alidns.com/dns-query
-  - https://doh.pub/dns-query
-  nameserver-policy:
-    geosite:private,cn,geolocation-cn:
-    - 10.22.240.10
-    - 10.22.240.8
-    - 119.29.29.29
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-    geosite:google,youtube,telegram,gfw,geolocation-!cn:
-    - 10.22.240.10
-    - 10.22.240.8
-    - 114.114.114.114
+  - 114.114.114.114
 {% endif %}
 
 {% if local.clash.new_field_name == "true" %}
