@@ -24,6 +24,9 @@ dns:
   - localhost.work.weixin.qq.com
   nameserver:
   - system
+  - 10.22.240.10
+  - 10.22.240.8
+  - 114.114.114.114
 {% endif %}
 
 {% if local.clash.new_field_name == "true" %}
