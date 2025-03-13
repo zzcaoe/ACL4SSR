@@ -24,8 +24,6 @@ dns:
     - localhost.ptlogin2.qq.com
     - localhost.sec.qq.com
     - localhost.work.weixin.qq.com
-    - +.mtalk.google.com
-    - mtalk.google.com
   use-hosts: true
   nameserver:
   - https://doh.pub/dns-query
