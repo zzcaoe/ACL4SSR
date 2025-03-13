@@ -10,25 +10,39 @@ dns:
   enable: true
   listen: 127.0.0.1:{{ default(request.adg.port, "5450") }}
   ipv6: false
-  use-system-hosts: false
-  cache-algorithm: arc
+  default-nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  - system
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
-  - +.lan
-  - +.local
-  - +.msftconnecttest.com
-  - +.msftncsi.com
-  - localhost.ptlogin2.qq.com
-  - localhost.sec.qq.com
-  - localhost.work.weixin.qq.com
-  - +.mtalk.google.com
-  - mtalk.google.com
+    - +.lan
+    - +.local
+    - +.msftconnecttest.com
+    - +.msftncsi.com
+    - localhost.ptlogin2.qq.com
+    - localhost.sec.qq.com
+    - localhost.work.weixin.qq.com
+    - +.mtalk.google.com
+    - mtalk.google.com
+  use-hosts: true
   nameserver:
+  - https://doh.pub/dns-query
+  - https://dns.alidns.com/dns-query
   - system
-  - 10.22.240.10
-  - 10.22.240.8
-  - 114.114.114.114
+  fallback:
+  - https://doh.dns.sb/dns-query
+  - https://dns.cloudflare.com/dns-query
+  - https://dns.twnic.tw/dns-query
+  - tls://8.8.4.4:853
+  fallback-filter:
+    geoip: true
+    ipcidr:
+    - 240.0.0.0/4
+    - 0.0.0.0/32
+  use-system-hosts: false
+bind-address: '*'
 {% endif %}
 
 {% if local.clash.new_field_name == "true" %}
