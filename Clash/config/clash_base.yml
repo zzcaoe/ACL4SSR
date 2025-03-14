@@ -26,10 +26,11 @@ dns:
     - localhost.work.weixin.qq.com
   use-hosts: true
   nameserver:
+  - system
   - https://doh.pub/dns-query
   - https://dns.alidns.com/dns-query
-  - system
   fallback:
+  - system
   - https://doh.dns.sb/dns-query
   - https://dns.cloudflare.com/dns-query
   - https://dns.twnic.tw/dns-query
