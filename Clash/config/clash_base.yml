@@ -7,53 +7,15 @@ external-controller: :9090
 
 {% if default(request.adg, "true") == "true" or exists("request.adg.port") %}
 dns:
-  enable: true
-  listen: 127.0.0.1:{{ default(request.adg.port, "5450") }}
-  ipv6: false
-  default-nameserver:
-  - 223.5.5.5
-  - 119.29.29.29
-  - system
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
-  fake-ip-filter:
-    - +.lan
-    - +.local
-    - +.msftconnecttest.com
-    - +.msftncsi.com
-    - localhost.ptlogin2.qq.com
-    - localhost.sec.qq.com
-    - localhost.work.weixin.qq.com
-    - +.mtalk.google.com
-    - alt1-mtalk.google.com
-    - alt2-mtalk.google.com
-    - alt3-mtalk.google.com
-    - alt4-mtalk.google.com
-    - alt5-mtalk.google.com
-    - alt6-mtalk.google.com
-    - alt7-mtalk.google.com
-    - alt8-mtalk.google.com
-    - mtalk.google.com
-    - dl.google.com
-    - dl.l.google.com
-  use-hosts: true
-  nameserver:
-  - system
-  - https://doh.pub/dns-query
-  - https://dns.alidns.com/dns-query
-  fallback:
-  - system
-  - https://doh.dns.sb/dns-query
-  - https://dns.cloudflare.com/dns-query
-  - https://dns.twnic.tw/dns-query
-  - tls://8.8.4.4:853
-  fallback-filter:
-    geoip: true
-    ipcidr:
-    - 240.0.0.0/4
-    - 0.0.0.0/32
-  use-system-hosts: false
-bind-address: '*'
+    enable: true
+    ipv6: false
+    default-nameserver: [223.5.5.5, 119.29.29.29]
+    enhanced-mode: fake-ip
+    fake-ip-range: 198.18.0.1/16
+    use-hosts: true
+    nameserver: ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query']
+    fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
+    fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 {% endif %}
 
 {% if local.clash.new_field_name == "true" %}
