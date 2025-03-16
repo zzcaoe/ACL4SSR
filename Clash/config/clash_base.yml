@@ -11,9 +11,9 @@ dns:
    listen: 127.0.0.1:{{ default(request.adg.port, "5450") }}
    ipv6: false
    default-nameserver:
+   - system
    - 223.5.5.5
    - 119.29.29.29
-   - system
    enhanced-mode: fake-ip
    fake-ip-range: 198.18.0.1/16
    fake-ip-filter:
@@ -54,7 +54,7 @@ dns:
      - 0.0.0.0/32
    use-system-hosts: false
  bind-address: '*'
-{% endif %}
+ {% endif %}
 
 {% if local.clash.new_field_name == "true" %}
 proxies: ~
