@@ -1,5 +1,11 @@
 # 内容：MyDirect
 # 数量：
+DST-PORT,22
+DST-PORT,110
+DST-PORT,143
+DST-PORT,465
+DST-PORT,587
+DST-PORT,3389
 DOMAIN-KEYWORD,msftconnecttest.com
 DOMAIN-KEYWORD,nature.com
 DOMAIN-KEYWORD,science.org
