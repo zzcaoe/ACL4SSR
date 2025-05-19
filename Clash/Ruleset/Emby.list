@@ -1,5 +1,5 @@
 # 内容：Emby
 # 数量：
-DOMAIN-SUFFIX  niceduck.lol
-DOMAIN-SUFFIX  emby.moe
-DOMAIN-SUFFIX  xxlb.net
+DOMAIN-SUFFIX,niceduck.lol
+DOMAIN-SUFFIX,emby.moe
+DOMAIN-SUFFIX,xxlb.net
