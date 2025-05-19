@@ -30,3 +30,29 @@ DOMAIN-KEYWORD,qmjianli
 DOMAIN-KEYWORD,wegame
 DOMAIN-KEYWORD,clarivate.com
 DOMAIN-KEYWORD,connectivitycheck.cbg-app.huawei.com
+# 初始化
+DOMAIN-SUFFIX,init.itunes.apple.com
+
+# 搜索相关
+DOMAIN-SUFFIX,amp-api.music.apple.com
+
+# MV播放
+DOMAIN-SUFFIX,mvod.itunes.apple.com
+
+# Apple Music 歌曲播放
+DOMAIN-SUFFIX,aod.itunes.apple.com
+DOMAIN-SUFFIX,play.itunes.apple.com
+
+# 不知道是做什么用的
+DOMAIN-SUFFIX,client-api.itunes.apple.com
+DOMAIN-SUFFIX,se2.itunes.apple.com
+
+# macOS、iOS 和 iTunes 使用
+DOMAIN-SUFFIX,xp.apple.com
+
+# 资料库更新
+DOMAIN-SUFFIX,librarydaap.itunes.apple.com
+DOMAIN-SUFFIX,sync.itunes.apple.com
+
+# Siri、听写功能
+DOMAIN-SUFFIX,guzzoni.apple.com
