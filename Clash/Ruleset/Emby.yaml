@@ -1,0 +1,6 @@
+payload:
+  # 内容：Emby
+  # 数量：3条
+  - DOMAIN-SUFFIX,niceduck.lol
+  - DOMAIN-SUFFIX,emby.moe
+  - DOMAIN-SUFFIX,xxlb.net
